@@ -3,7 +3,7 @@ window.addEventListener("load", () => {
     const tiles = document.querySelectorAll(".tiles div");
     const visual = document.querySelector(".visual");
     const musicNotes = [
-        "notes/Green-note.png",
+        "notes/green-note.png",
         "notes/Blue-note.png",
         "notes/Purple-note.png",
         "notes/Yellow-note.png",
@@ -37,4 +37,3 @@ window.addEventListener("load", () => {
         })
     }
 });
-
