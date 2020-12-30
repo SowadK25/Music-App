@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+}
+
+.app {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+  background: #fc00ff;
+  background: -webkit-linear-gradient(to right, #00dbde, #fc00ff);
+  background: linear-gradient(to right, #00dbde, #fc00ff);
+  overflow-x: hidden;
+}
+
+header h1 {
+  margin: 50px 0px 30px 0px;
+  text-align: center;
+  font-size: 40px;
+}
+
+header p {
+  font-size: 20px;
+}
+
+.tiles {
+  width: 100%;
+  display: flex;
+}
+
+.tiles > div {
+  height: 150px;
+  width: 100px;
+  flex: 1;
+  cursor: pointer;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.tile1 {
+  background: #60d394;
+}
+
+.tile2 {
+  background: #0e8bf8;
+}
+
+.tile3 {
+  background: #902fe8;
+}
+
+.tile4 {
+  background: #bae834;
+}
+
+.tile5 {
+  background: #ff2c97;
+}
+
+.tile6 {
+  background: #ff7813;
+}
+
+.tile7 {
+  background: #ff2424;
+}
+
+.tile8 {
+  background: #26fcff;
+}
+
+@keyframes float {
+  0% {
+    bottom: 0%;
+    opacity: 1;
+  }
+  100% {
+    bottom: 100%;
+    opacity: 0;
+  }
+}
+
+.visual > img {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 0;
+}
+
+.bounce {
+  animation-name: bounce;
+  animation-timing-function: ease;
+  animation-duration: 2s;
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    transform: scale(1.1, 0.9) translateY(0);
+  }
+  30% {
+    transform: scale(0.9, 1.1) translateY(-150px);
+  }
+  50% {
+    transform: scale(1.05, 0.95) translateY(0);
+  }
+  57% {
+    transform: scale(1, 1) translateY(-20px);
+  }
+  64% {
+    transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    transform: scale(1, 1) translateY(0);
+  }
+}
+
+.bubbles > img {
+  position: absolute;
+  height: 70px;
+}
+
+.bubbles {
+  width: 100%;
+}
+
+.bubble1 {
+  animation-delay: -1s;
+  left: 20%;
+  animation: bubble 10s infinite;
+}
+
+.bubble2 {
+  animation-delay: -2s;
+  left: 40%;
+  animation: bubble 5s infinite;
+}
+
+.bubble3 {
+  animation-delay: -3s;
+  right: 20%;
+  animation: bubble 8s infinite;
+}
+
+.bubble4 {
+  animation-delay: -4s;
+  right: 40%;
+  animation: bubble 7s infinite;
+}
+
+@keyframes bubble {
+  0% {
+    bottom: 0%;
+  }
+  100% {
+    bottom: 100%;
+  }
+}
+
+@media screen and (max-width: 475px) {
+  .bubble1 {
+    left: 5%;
+  }
+
+  .bubble2 {
+    animation-delay: -2s;
+    left: 25%;
+    animation: bubble 5s infinite;
+  }
+
+  .bubble3 {
+    animation-delay: -3s;
+    right: 5%;
+    animation: bubble 8s infinite;
+  }
+
+  .bubble4 {
+    animation-delay: -4s;
+    right: 25%;
+    animation: bubble 7s infinite;
+  }
+
+  .bubbles > img {
+    height: 55px;
+  }
+
+  .visual > img {
+    height: 75px;
+    width: 75px;
+  }
+
+  .app h1 {
+    font-size: 25px;
+  }
+
+  .app p {
+    font-size: 18px;
+  }
+}
